@@ -63,7 +63,8 @@ char **strtow(char *str)
 					*tmp++ = str[start++];
 				*tmp = '\0';
 				matrix[k] = tmp - c;
-				k++= 0;
+				k++;
+				c= 0;
 			}
 		}
 		else if (c++ == 0)
