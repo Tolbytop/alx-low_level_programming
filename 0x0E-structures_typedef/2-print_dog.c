@@ -3,15 +3,24 @@
 
 /**
  * print_dog - prints a struct dog
+ * @d: struct dog.
  *
- * @d: struct variable
+ * Return: no return.
  */
 void print_dog(struct dog *d)
 {
-	if (d != 0)
+	if (d)
 	{
-		printf("Name: %s\n", d->name != NULL ? d->name : "(nil)");
+		if (!(d->name))
+			printf("Name: (nil)\n");
+		else
+			printf("Name: %s\n", d->name);
+
 		printf("Age: %f\n", d->age);
-		printf("Owner: %s\n", d->owner != NULL ? d->owner : "(nil)");
+
+		if (!(d->owner))
+			printf("Owner: (nil)\n");
+		else
+			printf("Owner: %s\n", d->owner);
 	}
 }
