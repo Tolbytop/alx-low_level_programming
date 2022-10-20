@@ -3,6 +3,7 @@
 void first(void) __attribute__ ((constructor));
 
 /**
+ * first - ...
  * bmain - function executed before main
  * Return: no return.
  */
